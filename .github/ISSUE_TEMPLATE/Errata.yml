@@ -5,7 +5,7 @@ labels: ["errata", "triage"]
 projects: ["raspberrypipress/official-raspberry-pi-camera-guide-2e"]
 assignees:
   - bjepson
-  - ghalfacree
+  - lucyhattersley
 body:
   - type: markdown
     attributes:
