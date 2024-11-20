@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AquaPiCam</title>
+	<style>
+        .button {
+            display: inline-block;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+            background-color: #4CAF50;
+        }
+        .button:hover { background-color: #3e8e41 }
+        .center { text-align: center; }
+        body {
+            font: 100 1.5em Helvetica, Arial, sans-serif;
+            background-color: grey;
+        }
+        h1 { color: #0000ff; }
+        h2 { color: #6600cc; }
+        h3 { color: #003300; }
+	</style>
+</head>
+<body>
+    <h1 class="center">AquaPiCam!</h1>
+    <h2 class="center">Free disk space: {{ df_pc }}%</h2>
+    <h3 class="center">Message: {{ message }} </h3>
+    <form class="center" action="/" method="post">
+        <input class="button" type="submit"
+               name="submit" value="Take Photo">
+        <input class="button" type="submit" 
+          onclick="return confirm('Really shut down?');"
+               name="submit" value="Shutdown">
+    </form>
+    <div class="center"><p>Latest image:</p>
+        <img src="../static/latest.jpg" width="480" height="287"
+             alt="Last"/>
+    </div>
+</body>
+</html>
